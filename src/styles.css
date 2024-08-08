@@ -1,0 +1,27 @@
+@import url('../src/assets/css/bootstrap.min.css');
+.custom-mat-select .mat-form-field-flex{
+
+    border: 1px solid;
+    border-color: #ced4da;
+    width: 100%;
+    margin-bottom: -25px;
+    padding-left: 7px;
+    font-family: sans-serif;
+    border-radius: .25rem;
+
+
+}
+
+
+.custom-mat-select .mat-form-field-underline {
+    display: none;
+  }
+
+  .mat-select-panel {
+    margin-left: 31px;
+    min-width: calc(100% + 9px) !important;
+  }
+
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

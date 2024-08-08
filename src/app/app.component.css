@@ -1,0 +1,13 @@
+.toolbar-center {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    font-size: xx-large; /* Sets the font size */
+    font-weight: bold; /* Sets the font weight */
+    height: 64px; /* Optional: ensures consistent height */
+    text-align: center; /* Centers the text within the toolbar */
+  }
+  .full-width {
+    width: 100%; /* Makes the form field take up the full width of its container */
+    margin-top: 20px; /* Adds some margin for spacing */
+  }  

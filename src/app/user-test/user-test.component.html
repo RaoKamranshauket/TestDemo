@@ -1,0 +1,73 @@
+<!-- <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">LMS</a>
+  </nav>
+
+  <div class="row mt-4">
+    <div class="col-12 text-center">
+      <h2>Welcome to Online English Test</h2>
+      <p>Time left: {{ formatTime(timeLeft) }}</p>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-12 text-center">
+      <button class="btn btn-primary" (click)="toggleAudio()" [disabled]="!audio.paused || audioEnded">
+        {{ audio.paused ? 'Play' : 'Pause' }}
+      </button>
+      <div class="mt-2">
+        Duration: {{ formatTime(duration) }} | Current Time: {{ formatTime(currentTime) }}
+      </div>
+      <div class="progress mt-3">
+        <div
+          class="progress-bar progress-bar-green"
+          role="progressbar"
+          [style.width]="(currentTime / duration) * 100 + '%'"
+          [attr.aria-valuenow]="currentTime"
+          aria-valuemin="0"
+          [attr.aria-valuemax]="duration"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div *ngIf="mainDiv">
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+          <h2>Welcome to Online English Test</h2>
+          <p style="font-weight: 700;color: red;">Time left: {{ formatTime(timeLeft) }}</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+    <div class="col-12 text-center">
+      <button style="margin-bottom: 10px;" mat-raised-button color="primary" (click)="toggleAudio()" [disabled]="!audio.paused || audioEnded">
+        {{ audio.paused ? 'Play' : 'Pause' }}
+      </button>
+      <div class="mt-2" style="margin-bottom: 10px;">
+        Duration: {{ formatTime(duration) }} | Current Time: {{ formatTime(currentTime) }}
+      </div>
+      <mat-progress-bar mode="determinate" [value]="(currentTime / duration) * 100"></mat-progress-bar>
+     <div *ngIf="showTextArea">
+      <label style="position: absolute;margin-top: 10px;">Enter here What you listen</label>
+        <mat-form-field style="    width: 100%;
+    margin-top: 30px;" appearance="fill" class="full-width">
+          <textarea matInput [(ngModel)]="userInput" placeholder="Enter your text here..." rows="4"></textarea>
+        </mat-form-field>
+        <button  (click)="compareText(userInput)" style="margin-bottom: 10px;" mat-raised-button color="primary">Submit</button>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div *ngIf="submit" class="container">
+  <div class="row mt-4">
+    <div class="col-12 text-center">
+  <span style="font-size: xx-large;">Your Exam has been submitted.</span>
+  <mat-icon class="checkmark animate-checkmark">check_circle</mat-icon>
+    </div></div>
+</div>

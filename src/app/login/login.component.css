@@ -1,0 +1,37 @@
+:host {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: url('/assets/img/nw.jpg') no-repeat center center fixed;
+    background-size: cover;
+  
+}
+    ::ng-deep .form-control {
+      border-radius: 0.25rem; 
+      background-color: #f8f9fa; 
+    }
+  
+    ::ng-deep .btn-primary {
+      background-color: #0056b3; 
+      border-color: #004085; 
+      width: 10rem;
+      height: 3rem;
+      font-size: small;
+    }
+  
+    ::ng-deep .card {
+        background: rgba(255, 255, 255, 0.9); 
+        width: 30rem; 
+        padding: 2rem; 
+        font-size: large;
+        border-radius: 0.5rem; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  
+  
